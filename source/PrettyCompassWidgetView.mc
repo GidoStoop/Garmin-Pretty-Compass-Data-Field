@@ -16,7 +16,7 @@ class PrettyCompassWidgetView extends WatchUi.View {
     function onLayout(dc as Dc) as Void {
         setLayout(Rez.Layouts.MainLayout(dc));
         var myTimer = new Timer.Timer();
-        myTimer.start(method(:requestUpdate), 2000, true);
+        myTimer.start(method(:requestUpdate), 1000, true);
     }
 
     // Called when this View is brought to the foreground. Restore
