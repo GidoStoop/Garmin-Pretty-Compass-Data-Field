@@ -9,12 +9,6 @@ module Rez {
         (:initialized) var LauncherIcon as ResourceId;
     } // Drawables
 
-    module Layouts {
-        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
-            return [] as Array<WatchUi.Drawable>;
-        }
-    } // Layouts
-
     module Strings {
         (:initialized) var AppName as ResourceId;
     } // Strings
