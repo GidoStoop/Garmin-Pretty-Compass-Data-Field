@@ -22,6 +22,10 @@ class PrettyCompassView extends Ui.DataField
 	function onUpdate(dc) {
         var screenWidth = dc.getWidth();
         var screenHeight = dc.getHeight();
+
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_TRANSPARENT);
+        dc.fillRectangle(0,0,screenWidth,screenHeight);
+
         var centerX = Math.round( screenWidth / 2 );
         var centerY = Math.round( screenHeight / 2 );
         var developerWidth = 215.0;
@@ -36,7 +40,7 @@ class PrettyCompassView extends Ui.DataField
         var EarrayX = [72,64,64,69,64,64,73];
         var EarrayY = [-7,-7,0,0,0,7,7];
 
-        var heading = Activity.getActivityInfo().currentHeading;
+        var heading = -Activity.getActivityInfo().currentHeading;
         dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_TRANSPARENT);
 
         writeCardinality(centerX, centerY, dc, heading, NarrayX, NarrayY, DevUserRatio);
